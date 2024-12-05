@@ -4,7 +4,7 @@ import { FaSquareArrowUpRight } from "react-icons/fa6";
 
 const Header = () => {
   return (
-    <div className="flex items-center justify-between border-b border-black h-24">
+    <div className="flex items-center justify-between border-b border-black h-24 sticky">
       <div className="border-r pr-20 pl-32 border-black h-full flex items-center">
         <img src={Logo} alt="TRI LINK" className="" />
       </div>
