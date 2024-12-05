@@ -34,8 +34,7 @@ const Footer = () => {
         {/* Left Section */}
         <div className="w-4/12">
           <div className="w-3/4 flex justify-left items-start flex-col">
-            <img src={Logo} alt="Tri Link" className="max-w-64 mx-auto"/>
-            <h2 className="text-2xl font-bold">TRI LINK</h2>
+            <img src={Logo} alt="Tri Link" className="max-w-64 mx-auto"/>           
             <p className="mt-2 text-brand-primary text-center">
               Tri Link delivers exceptional FTZ and 3PL services tailored to
               your global trade needs.
