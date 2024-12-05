@@ -4,10 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        "brand-primary": "#193444"
+        "brand-primary": "#193444",
+        "brand-secondary": "#50845e",
       },
       backgroundColor: {
         "brand-bg": "#193444",       
+        "brand-bg-secondary": "#50845e",       
       },
     },
   },
