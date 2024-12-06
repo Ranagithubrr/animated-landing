@@ -16,9 +16,9 @@ function App() {
       <Transport />
       <Services />
       <LogisticSolution />
+      <Carousel />
       <Footer />
       <Copyright />
-      <Carousel />
     </>
   );
 }
