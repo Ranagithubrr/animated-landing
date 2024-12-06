@@ -85,7 +85,8 @@ const Hero = () => {
           Scroll more
           <br />& explore!
         </p>
-        <motion.span
+        <motion.a
+        href="#transportSection"
           className="mt-5 text-5xl text-brand-primary"
           animate={{
             y: [0, 15, 0],
@@ -98,7 +99,7 @@ const Hero = () => {
           }}
         >
           <SlArrowDownCircle />
-        </motion.span>
+        </motion.a>
       </div>
     </div>
   );
