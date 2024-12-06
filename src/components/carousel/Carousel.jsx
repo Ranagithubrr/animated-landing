@@ -10,15 +10,15 @@ import SliderImage9 from "../../assets/img/9.avif";
 
 const Carousel = () => {
   const items = [
-    { imageSource: SliderImage, text: "GEEKS" },
-    { imageSource: SliderImage2, text: "For" },
-    { imageSource: SliderImage3, text: "GEEKS" },
-    { imageSource: SliderImage4, text: "GEEKS" },
-    { imageSource: SliderImage5, text: "GEEKS" },
-    { imageSource: SliderImage6, text: "GEEKS" },
-    { imageSource: SliderImage7, text: "GEEKS" },
-    { imageSource: SliderImage8, text: "GEEKS" },
-    { imageSource: SliderImage9, text: "GEEKS" },
+    { imageSource: SliderImage, text: "Apparel & Fashion" },
+    { imageSource: SliderImage2, text: "Health, Beauty & Cosmetics" },
+    { imageSource: SliderImage3, text: "Footwear & Footgear" },
+    { imageSource: SliderImage4, text: "Kids Products & Toys" },
+    { imageSource: SliderImage5, text: "Consumer Electronics" },
+    { imageSource: SliderImage6, text: "Home Goods & Décor" },
+    { imageSource: SliderImage7, text: "Food Items, Beverages, and Alcohol" },
+    { imageSource: SliderImage8, text: "Construction Materials & Tires" },
+    { imageSource: SliderImage9, text: "Raw Materials" },
   ];
   return (
     <div>
@@ -27,7 +27,7 @@ const Carousel = () => {
         {items.map((item, index) => (
           <p
             key={index}
-            className="flex-1 h-full overflow-hidden cursor-pointer rounded-sm transition-all duration-500 flex justify-center items-center hover:grow-[4]"
+            className="flex-1 h-full overflow-hidden cursor-pointer rounded-sm transition-all duration-500 flex justify-start items-center hover:grow-[4]"
             style={{
               backgroundImage: `url(${item.imageSource})`, // Dynamically set the background image
               backgroundSize: "cover",
