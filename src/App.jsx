@@ -5,6 +5,7 @@ import Footer from "./components/footer/Footer";
 import Copyright from "./components/footer/Copyright";
 import Transport from "./components/transport/Transport";
 import Services from "./components/services/Services";
+import LogisticSolution from "./components/logisticSolutions/LogisticSolution";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Hero />
       <Transport />
       <Services />
+      <LogisticSolution />
       <Footer />
       <Copyright />
     </>
