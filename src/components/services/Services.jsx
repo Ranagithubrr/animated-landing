@@ -2,7 +2,7 @@ import React from "react";
 
 const Services = () => {
   return (
-    <div className="z-20 2xl:-mt-[500px] mb-[300px] bg-brand-primary">
+    <div className="z-20 2xl:-mt-[500px] 2xl:mb-[300px] bg-brand-primary">
       <div className="mx-auto max-w-screen-2xl">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div className="p-6 rounded-lg">
