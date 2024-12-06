@@ -6,6 +6,7 @@ import Copyright from "./components/footer/Copyright";
 import Transport from "./components/transport/Transport";
 import Services from "./components/services/Services";
 import LogisticSolution from "./components/logisticSolutions/LogisticSolution";
+import Carousel from "./components/carousel/Carousel";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <LogisticSolution />
       <Footer />
       <Copyright />
+      <Carousel />
     </>
   );
 }
