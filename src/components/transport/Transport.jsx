@@ -12,7 +12,7 @@ const Transport = () => {
   const { scrollY } = useScroll();
 
   // Offset the animations to start after 500px of scrolling
-  const adjustedScrollY = useTransform(scrollY, (y) => Math.max(0, y - 700));
+  const adjustedScrollY = useTransform(scrollY, (y) => Math.max(0, y - 250));
 
   // Calculate the animations for the horizontal alignment
   const transformPosition = (startX) => ({
