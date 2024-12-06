@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const Transport = () => {
@@ -12,7 +12,40 @@ const Transport = () => {
   const { scrollY } = useScroll();
 
   // Offset the animations to start after 500px of scrolling
-  const adjustedScrollY = useTransform(scrollY, (y) => Math.max(0, y - 550));
+//   const adjustedScrollY = useTransform(scrollY, (y) => Math.max(0, y - 800));
+
+
+const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+// Listen for window resize events
+useEffect(() => {
+  const handleResize = () => {
+    setScreenWidth(window.innerWidth); // Update the screen width state
+  };
+
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize); // Cleanup the event listener
+}, []);
+
+// Adjust scrollY transformation based on the screen width
+const adjustedScrollY = useTransform(scrollY, (y) => {
+  let offset = 800; // Default offset for large screens (desktop/laptop)
+
+  if (screenWidth <= 768) {
+    // For mobile and small screens (tablets/phones)
+    offset = 200; // Smaller offset for mobile devices
+  } else if (screenWidth <= 1024) {
+    // For medium screens (small laptops/tablets)
+    offset = 200;
+  }
+   else if (screenWidth >= 1024) {
+    // For medium screens (small laptops/tablets)
+    offset = 600;
+  }
+
+  // Apply the calculated offset
+  return Math.max(0, y - offset);
+});
 
   // Calculate the animations for the horizontal alignment
   const transformPosition = (startX) => ({
@@ -35,7 +68,7 @@ const Transport = () => {
   const textOpacity = useTransform(adjustedScrollY, [0, 500], [1, 0]);
 
   return (
-    <div style={{ height: "190vh", maxWidth:'100vw', overflow:'hidden' }}>
+    <div style={{ maxWidth:'100vw', overflow:'hidden' }} className="h-[200vh] 2xl:h-[180vh]">
       <div className="relative flex flex-col items-center py-16">
         <h2 className="mb-32 text-6xl font-semibold text-brand-primary">
           Worldwide Transport, Simplified
@@ -46,7 +79,7 @@ const Transport = () => {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="absolute flex items-center justify-center text-center text-white rounded-full h-80 w-80 bg-brand-primary"
+              className="absolute flex items-center justify-center w-64 h-64 text-center text-white rounded-full 2xl:h-80 2xl:w-80 bg-brand-primary"
               style={serviceTransforms[index]}
             >
               <motion.p
