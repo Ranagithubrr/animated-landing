@@ -12,7 +12,7 @@ const Transport = () => {
   const { scrollY } = useScroll();
 
   // Offset the animations to start after 500px of scrolling
-  const adjustedScrollY = useTransform(scrollY, (y) => Math.max(0, y - 500));
+  const adjustedScrollY = useTransform(scrollY, (y) => Math.max(0, y - 550));
 
   // Calculate the animations for the horizontal alignment
   const transformPosition = (startX) => ({
@@ -22,10 +22,10 @@ const Transport = () => {
   });
 
   const serviceTransforms = [
-    transformPosition(-450), // Far left
-    transformPosition(-150), // Mid left
-    transformPosition(150), // Mid right
-    transformPosition(450), // Far right
+    transformPosition(-550), // Far left
+    transformPosition(-180), // Mid left
+    transformPosition(180), // Mid right
+    transformPosition(550), // Far right
   ];
 
   // Make the single circle appear
@@ -37,7 +37,7 @@ const Transport = () => {
   return (
     <div style={{ height: "190vh", maxWidth:'100vw', overflow:'hidden' }}>
       <div className="relative flex flex-col items-center py-16">
-        <h2 className="mb-8 text-3xl font-semibold text-gray-700">
+        <h2 className="mb-32 text-6xl font-semibold text-brand-primary">
           Worldwide Transport, Simplified
         </h2>
 
@@ -46,11 +46,11 @@ const Transport = () => {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="absolute flex items-center justify-center w-64 h-64 text-center text-white rounded-full bg-brand-primary"
+              className="absolute flex items-center justify-center text-center text-white rounded-full h-80 w-80 bg-brand-primary"
               style={serviceTransforms[index]}
             >
               <motion.p
-                className="text-sm font-semibold"
+                className="p-4 text-3xl font-semibold"
                 style={{ opacity: textOpacity }}
               >
                 {service.title}
