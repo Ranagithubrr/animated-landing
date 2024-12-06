@@ -39,7 +39,7 @@ const Hero = () => {
 
   return (
     <div
-      className="flex flex-col justify-center h-screen mx-auto max-w-screen-2xl items-left -mt-36"
+      className="flex flex-col justify-center h-[120vh] mx-auto max-w-screen-lg 2xl:max-w-screen-2xl items-left -mt-36"
       style={{
         backgroundImage: `url(${HeroBg})`,
         backgroundSize: "cover",
@@ -50,28 +50,28 @@ const Hero = () => {
       <h1 ref={titleRef} className="font-extrabold text-brand-primary">
         <span
           className={` ${
-            closestWord === "EMPOWER" ? "text-7xl" : "text-6xl"
+            closestWord === "EMPOWER" ? "text-6xl 2xl:text-7xl" : "text-5xl 2xl:text-6xl"
           } word transition-all duration-500 ease-in-out mr-2`}
         >
           EMPOWER
-        </span>{" "}
+        </span>
         <span
           className={` ${
-            closestWord === "YOUR" ? "text-7xl" : "text-6xl"
+            closestWord === "YOUR" ? "text-6xl 2xl:text-7xl" : "text-5xl 2xl:text-6xl"
           } word transition-all duration-500 ease-in-out mr-2`}
         >
           YOUR
         </span>{" "}
         <span
           className={` ${
-            closestWord === "GLOBAL" ? "text-7xl" : "text-6xl"
+            closestWord === "GLOBAL" ? "text-6xl 2xl:text-7xl" : "text-5xl 2xl:text-6xl"
           } word transition-all duration-500 ease-in-out mr-2`}
         >
           GLOBAL
         </span>{" "}
         <span
           className={` ${
-            closestWord === "TRADE" ? "text-7xl" : "text-6xl"
+            closestWord === "TRADE" ? "text-6xl 2xl:text-7xl" : "text-5xl 2xl:text-6xl"
           } word transition-all duration-500 ease-in-out`}
         >
           TRADE
