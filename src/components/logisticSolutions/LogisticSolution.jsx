@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
-function Counter({ initialValue }) {
+function Counter({ initialValue, label, color  }) {
   const [count, setCount] = useState(0);
   const [isCounting, setIsCounting] = useState(false);
   const counterRef = useRef(null);
@@ -51,18 +51,17 @@ function Counter({ initialValue }) {
   return (
     <section
       ref={counterRef}
+      className="relative bg-brand-primary"
       style={{
         position: "relative",
-        height: "100vh",
-        backgroundColor: "#333",
+        height: "100vh",        
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
       }}
     >
       <motion.div
-        style={{
-          fontSize: "50px",
+        style={{          
           fontWeight: "bold",
           color: "white",
         }}
@@ -71,32 +70,42 @@ function Counter({ initialValue }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
+          className={`absolute right-[15%] flex items-center ${color}`}
         >
-          {count}
-        </motion.span>
+          <span className={`text-9xl`}>{count}</span> <span className="text-2xl font-normal w-52">{label}</span>
+        </motion.span>    
       </motion.div>
     </section>
   );
 }
 
 export default function LogisticSolution() {
+  const labels = ["Transportation Efficiency", "Warehouse Optimization", "Cost Reduction"];
+  const data = [
+    { value: 80, label: "Average Number Of Clients", color: "text-white" },
+    { value: 95, label: "% Rate of orders completed on time", color: "text-brand-secondary" },
+    { value: 76, label: "% Warehouse  capacity utilization rate", color: "text-gray-500" },
+  ];
+
   return (
-    <>
+    <div className="">
       <p
-        className="sticky top-0"
+        className="sticky top-0 pt-20 mx-auto text-4xl text-center text-gray-200"
         style={{
-          zIndex: 10,
-          backgroundColor: "white",
-          padding: "10px",
-          fontWeight: "bold",
+          zIndex: 10,                       
         }}
       >
-        3PL and FTZ logistic solutions to Optimize Your Operations, Streamline
+        3PL and FTZ <span className="font-bold text-brand-secondary">logistic solutions</span> to Optimize Your Operations, Streamline
         Transportation, and Link You with Your Customers
       </p>
-      {[80, 95, 76].map((value, index) => (
-        <Counter key={index} initialValue={value} />
+      {data.map((item, index) => (
+        <Counter 
+          key={index} 
+          initialValue={item.value} 
+          label={item.label} 
+          color={item.color} // Pass the color
+        />
       ))}
-    </>
+    </div>
   );
 }
