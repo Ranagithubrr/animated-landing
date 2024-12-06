@@ -16,9 +16,9 @@ const Transport = () => {
 
   // Calculate the animations for the horizontal alignment
   const transformPosition = (startX) => ({
-    x: useTransform(adjustedScrollY, [0, 500], [startX, 0]),
-    y: useTransform(adjustedScrollY, [0, 500], [0, 0]),
-    scale: useTransform(adjustedScrollY, [0, 500], [1, 1]),
+    x: useTransform(adjustedScrollY, [0, 500, 1000], [startX, 0, 0]),
+    y: useTransform(adjustedScrollY, [0, 500, 1000], [0, 0, 0]),
+    scale: useTransform(adjustedScrollY, [0, 500, 1000], [1, 1, 10]), // The circle will scale up to 10 times its original size
   });
 
   const serviceTransforms = [
@@ -31,8 +31,11 @@ const Transport = () => {
   // Make the single circle appear
   const singleOpacity = useTransform(adjustedScrollY, [400, 500], [0, 1]);
 
+  // Calculate opacity for text (will hide when the circle collapses)
+  const textOpacity = useTransform(adjustedScrollY, [0, 500], [1, 0]);
+
   return (
-    <div style={{ height: "50vh" }}>
+    <div style={{ height: "150vh" }}> {/* Adjusted to allow for more scroll */}
       <div className="relative flex flex-col items-center py-16">
         <h2 className="mb-8 text-3xl font-semibold text-gray-700">
           Worldwide Transport, Simplified
@@ -43,13 +46,18 @@ const Transport = () => {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="absolute flex items-center justify-center w-64 h-64 text-center text-white bg-blue-900 rounded-full"
+              className="absolute flex items-center justify-center w-64 h-64 text-center text-white rounded-full bg-brand-primary"
               style={serviceTransforms[index]}
             >
-              <p className="text-sm font-semibold">{service.title}</p>
+              <motion.p
+                className="text-sm font-semibold"
+                style={{ opacity: textOpacity }}
+              >
+                {service.title}
+              </motion.p>
             </motion.div>
           ))}
-        </div>            
+        </div>
       </div>
     </div>
   );
