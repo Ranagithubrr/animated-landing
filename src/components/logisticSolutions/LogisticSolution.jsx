@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import backgroundImage from "../../assets/img/logistic-bg.webp"; // Import the background image
 
-function Counter({ initialValue, label, color  }) {
+function Counter({ initialValue, label, color }) {
   const [count, setCount] = useState(0);
   const [isCounting, setIsCounting] = useState(false);
   const counterRef = useRef(null);
@@ -51,13 +52,17 @@ function Counter({ initialValue, label, color  }) {
   return (
     <section
       ref={counterRef}
-      className="relative bg-brand-primary"
+      className="relative bg-fixed bg-brand-primary" // Add bg-fixed for a stationary background
       style={{
         position: "relative",
         height: "100vh",        
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        backgroundImage: `url(${backgroundImage})`, // Set the background image
+        backgroundSize: "cover", // Make sure the image covers the section
+        backgroundPosition: "bottom left", // Position it at the bottom-left
+        backgroundRepeat: "no-repeat", // Prevent repeating
       }}
     >
       <motion.div
@@ -70,9 +75,9 @@ function Counter({ initialValue, label, color  }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className={`absolute right-[15%] flex items-center ${color}`}
+          className={`absolute right-[5%] flex items-center ${color}`}
         >
-          <span className={`text-9xl`}>{count}</span> <span className="text-2xl font-normal w-52">{label}</span>
+          <span className="text-9xl">{count}</span> <span className="text-2xl font-normal w-52">{label}</span>
         </motion.span>    
       </motion.div>
     </section>
@@ -80,17 +85,16 @@ function Counter({ initialValue, label, color  }) {
 }
 
 export default function LogisticSolution() {
-  const labels = ["Transportation Efficiency", "Warehouse Optimization", "Cost Reduction"];
   const data = [
     { value: 80, label: "Average Number Of Clients", color: "text-white" },
     { value: 95, label: "% Rate of orders completed on time", color: "text-brand-secondary" },
-    { value: 76, label: "% Warehouse  capacity utilization rate", color: "text-gray-500" },
+    { value: 76, label: "% Warehouse capacity utilization rate", color: "text-gray-500" },
   ];
 
   return (
-    <div className="">
+    <div className="bg-brand-primary">
       <p
-        className="sticky top-0 pt-20 mx-auto text-4xl text-center text-gray-200"
+        className="sticky top-0 pt-20 mx-auto text-4xl text-center text-gray-200 xl:w-2/3 2xl:w-[50%]"
         style={{
           zIndex: 10,                       
         }}
