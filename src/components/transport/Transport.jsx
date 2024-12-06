@@ -9,13 +9,16 @@ const Transport = () => {
     { title: "Efficient 3PL Services" },
   ];
 
-  const { scrollYProgress } = useScroll();
+  const { scrollY } = useScroll();
+
+  // Offset the animations to start after 500px of scrolling
+  const adjustedScrollY = useTransform(scrollY, (y) => Math.max(0, y - 700));
 
   // Calculate the animations for the horizontal alignment
   const transformPosition = (startX) => ({
-    x: useTransform(scrollYProgress, [0, 0.5], [startX, 0]),
-    y: useTransform(scrollYProgress, [0, 0.5], [0, 0]),
-    scale: useTransform(scrollYProgress, [0, 0.5], [1, 0.5]),
+    x: useTransform(adjustedScrollY, [0, 500], [startX, 0]),
+    y: useTransform(adjustedScrollY, [0, 500], [0, 0]),
+    scale: useTransform(adjustedScrollY, [0, 500], [1, 0.5]),
   });
 
   const serviceTransforms = [
@@ -26,7 +29,7 @@ const Transport = () => {
   ];
 
   // Make the single circle appear
-  const singleOpacity = useTransform(scrollYProgress, [0.4, 0.6], [0, 1]);
+  const singleOpacity = useTransform(adjustedScrollY, [400, 500], [0, 1]);
 
   return (
     <div style={{ height: "200vh" }}>
