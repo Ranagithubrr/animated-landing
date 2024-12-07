@@ -21,8 +21,8 @@ const Carousel = () => {
     { imageSource: SliderImage9, text: "Raw Materials" },
   ];
   return (
-    <div>
-     <h4 className="my-8 text-3xl font-bold text-center text-brand-primary">Key Retail Products</h4>
+    <div className="py-12">
+     <h4 className="mb-8 text-3xl font-bold text-center text-brand-primary">Key Retail Products</h4>
       <div className="relative max-w-screen-xl px-10 2xl:max-w-screen-2xl h-[600px] mx-auto flex rounded-2xl overflow-hidden">
         {items.map((item, index) => (
           <p

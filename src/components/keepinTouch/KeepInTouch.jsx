@@ -9,7 +9,7 @@ import LogoWhite from "../../assets/img/logo-white.png";
 
 const KeepInTouch = () => {
   return (
-    <div className="my-8 bg-brand-primary">
+    <div className="bg-brand-primary">
       <div className="flex items-center justify-between px-5 py-20 mx-auto max-w-screen-2xl">
         <div>
           <img src={LogoWhite} alt="tri link" className="w-4/6"/>

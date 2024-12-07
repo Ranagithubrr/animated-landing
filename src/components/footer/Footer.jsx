@@ -8,7 +8,6 @@ import {
 import Logo from "../../assets/img/logo.png";
 
 const Footer = () => {
-  // State for menu items
   const [menuItems] = useState({
     general: [
       { name: "Service", link: "#" },
@@ -34,7 +33,7 @@ const Footer = () => {
         {/* Left Section */}
         <div className="w-4/12">
           <div className="flex flex-col items-start w-3/4 justify-left">
-            <img src={Logo} alt="Tri Link" className="mx-auto max-w-64"/>           
+            <img src={Logo} alt="Tri Link" className="mx-auto max-w-64" />
             <p className="mt-2 text-center text-brand-primary">
               Tri Link delivers exceptional FTZ and 3PL services tailored to
               your global trade needs.

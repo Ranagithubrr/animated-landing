@@ -10,6 +10,7 @@ import Carousel from "./components/carousel/Carousel";
 import CloserLookSlider from "./components/closerLookSlider/CloserLookSlider";
 import QuoteForm from "./components/quoteForm/QuoteForm";
 import KeepInTouch from "./components/keepinTouch/KeepInTouch";
+import ReadytoSimplify from "./components/readyToSimplify/ReadytoSimplify";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Services />
       <LogisticSolution />
       <Carousel />
+      <ReadytoSimplify />
       <KeepInTouch />
       <QuoteForm />
       <CloserLookSlider />
