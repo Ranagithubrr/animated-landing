@@ -1,0 +1,36 @@
+.slider-container {
+  position: relative;
+}
+
+.arrow-container {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+  z-index: 100;
+  width: 150px;  
+}
+
+.custom-arrow {
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  color:#8ca1ac;
+  border:4px solid #8ca1ac;
+}
+
+.prev-arrow {
+  margin-right: 20px;
+}
+
+.next-arrow {
+  margin-left: 20px;
+}
+
+.custom-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}

@@ -7,6 +7,7 @@ import Transport from "./components/transport/Transport";
 import Services from "./components/services/Services";
 import LogisticSolution from "./components/logisticSolutions/LogisticSolution";
 import Carousel from "./components/carousel/Carousel";
+import CloserLookSlider from "./components/closerLookSlider/CloserLookSlider";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Services />
       <LogisticSolution />
       <Carousel />
+      <CloserLookSlider />
       <Footer />
       <Copyright />
     </>
