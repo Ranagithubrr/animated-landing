@@ -29,13 +29,13 @@ const Carousel = () => {
             key={index}
             className="flex-1 h-full overflow-hidden cursor-pointer transition-all duration-500 flex justify-end items-center hover:grow-[4] rounded-lg"
             style={{
-              backgroundImage: `url(${item.imageSource})`, // Dynamically set the background image
+              backgroundImage: `url(${item.imageSource})`, 
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
           >
             <span className="min-w-[14em] p-[.5em] text-center transform rotate-[-90deg] transition-all duration-500 uppercase text-gray-200 font-semibold tracking-[.1em]">
-              {item.text} {/* Dynamically set the text */}
+              {item.text}
             </span>
           </p>
         ))}
