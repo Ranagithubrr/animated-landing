@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css"; // Slick carousel CSS
 import "slick-carousel/slick/slick-theme.css"; // Slick theme CSS
 import { BiSolidLeftArrowAlt, BiSolidRightArrowAlt } from "react-icons/bi"; // Custom arrow icons
 import "./slider.css";
+import SliderCard from "./SliderCard";
 
 const CloserLookSlider = () => {
   const sliderRef = useRef(null); // Use ref to access the slider instance
@@ -27,33 +28,15 @@ const CloserLookSlider = () => {
   };
 
   return (
-    <div className="relative py-8 mx-auto max-w-screen-2xl slider-container">
+    <div className="relative py-8 pb-20 mx-auto border-b-2 slider-container">
       <Slider ref={sliderRef} {...settings}>
         <div className="p-4">
-          <h3 className="p-8 text-xl text-center bg-gray-200 rounded-lg">
-            Slide 1
-          </h3>
+         <SliderCard />
         </div>
         <div className="p-4">
-          <h3 className="p-8 text-xl text-center bg-gray-200 rounded-lg">
-            Slide 2
-          </h3>
+         <SliderCard />
         </div>
-        <div className="p-4">
-          <h3 className="p-8 text-xl text-center bg-gray-200 rounded-lg">
-            Slide 3
-          </h3>
-        </div>
-        <div className="p-4">
-          <h3 className="p-8 text-xl text-center bg-gray-200 rounded-lg">
-            Slide 4
-          </h3>
-        </div>
-        <div className="p-4">
-          <h3 className="p-8 text-xl text-center bg-gray-200 rounded-lg">
-            Slide 5
-          </h3>
-        </div>
+    
       </Slider>
       <div className="arrow-container">
         {/* Custom arrows outside the Slider component */}
