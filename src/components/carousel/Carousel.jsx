@@ -22,19 +22,19 @@ const Carousel = () => {
   ];
   return (
     <div>
-     <h4 className="text-brand-primary text-3xl text-center font-bold my-8">Key Retail Products</h4>
-      <div className="relative max-w-screen-xl h-[300px] mx-auto flex rounded-2xl overflow-hidden">
+     <h4 className="my-8 text-3xl font-bold text-center text-brand-primary">Key Retail Products</h4>
+      <div className="relative max-w-screen-xl px-10 2xl:max-w-screen-2xl h-[600px] mx-auto flex rounded-2xl overflow-hidden">
         {items.map((item, index) => (
           <p
             key={index}
-            className="flex-1 h-full overflow-hidden cursor-pointer rounded-sm transition-all duration-500 flex justify-start items-center hover:grow-[4]"
+            className="flex-1 h-full overflow-hidden cursor-pointer transition-all duration-500 flex justify-end items-center hover:grow-[4] rounded-lg"
             style={{
               backgroundImage: `url(${item.imageSource})`, // Dynamically set the background image
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
           >
-            <span className="min-w-[14em] p-[.5em] text-center transform rotate-[-90deg] transition-all duration-500 uppercase text-[#42032C] tracking-[.1em]">
+            <span className="min-w-[14em] p-[.5em] text-center transform rotate-[-90deg] transition-all duration-500 uppercase text-gray-200 font-semibold tracking-[.1em]">
               {item.text} {/* Dynamically set the text */}
             </span>
           </p>
