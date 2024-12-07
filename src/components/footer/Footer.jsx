@@ -29,17 +29,17 @@ const Footer = () => {
   });
 
   return (
-    <footer className="text-white py-10 border-b border-brand-primary">
-      <div className="max-w-screen-2xl mx-auto flex justify-between">
+    <footer className="px-5 py-10 text-white border-b border-brand-primary">
+      <div className="flex justify-between mx-auto max-w-screen-2xl">
         {/* Left Section */}
         <div className="w-4/12">
-          <div className="w-3/4 flex justify-left items-start flex-col">
-            <img src={Logo} alt="Tri Link" className="max-w-64 mx-auto"/>           
-            <p className="mt-2 text-brand-primary text-center">
+          <div className="flex flex-col items-start w-3/4 justify-left">
+            <img src={Logo} alt="Tri Link" className="mx-auto max-w-64"/>           
+            <p className="mt-2 text-center text-brand-primary">
               Tri Link delivers exceptional FTZ and 3PL services tailored to
               your global trade needs.
             </p>
-            <p className="mt-2 text-brand-primary text-center">
+            <p className="mt-2 text-center text-brand-primary">
               Our solutions combine innovation, quality, and efficiency to
               exceed your expectations and meet your specific requirements.
             </p>
@@ -48,13 +48,13 @@ const Footer = () => {
 
         {/* Middle Section (General Links) */}
         <div className="w-2/12">
-          <h3 className="text-brand-primary font-semibold text-2xl">General</h3>
+          <h3 className="text-2xl font-semibold text-brand-primary">General</h3>
           <ul className="mt-3 space-y-2">
             {menuItems.general.map((item, index) => (
               <li key={index} className="py-2">
                 <a
                   href={item.link}
-                  className="text-brand-primary hover:text-brand-secondary text-lg"
+                  className="text-lg text-brand-primary hover:text-brand-secondary"
                 >
                   {item.name}
                 </a>
@@ -65,7 +65,7 @@ const Footer = () => {
 
         {/* Right Section (Services Links) */}
         <div className="w-2/12">
-          <h3 className="text-brand-primary font-semibold text-2xl">
+          <h3 className="text-2xl font-semibold text-brand-primary">
             Services
           </h3>
           <ul className="mt-3 space-y-2">
@@ -73,7 +73,7 @@ const Footer = () => {
               <li key={index} className="py-2">
                 <a
                   href={item.link}
-                  className="text-brand-primary hover:text-brand-secondary text-lg"
+                  className="text-lg text-brand-primary hover:text-brand-secondary"
                 >
                   {item.name}
                 </a>
@@ -84,53 +84,53 @@ const Footer = () => {
 
         {/* Call Us Section */}
         <div className="w-full mt-6 md:w-auto ">
-          <h3 className="text-brand-primary font-semibold text-2xl">
+          <h3 className="text-2xl font-semibold text-brand-primary">
             Call Us!
           </h3>
           <div className="mt-3 space-y-1">
-            <p className="text-brand-primary hover:text-brand-secondary text-lg">
+            <p className="text-lg text-brand-primary hover:text-brand-secondary">
               +1-888-487-7707
             </p>
-            <p className="text-brand-primary hover:text-brand-secondary text-lg">
+            <p className="text-lg text-brand-primary hover:text-brand-secondary">
               in California: +1-562-280-7200
             </p>
-            <p className="text-brand-primary hover:text-brand-secondary text-lg">
+            <p className="text-lg text-brand-primary hover:text-brand-secondary">
               in Florida: +1-786-249-7200
             </p>
-            <p className="text-brand-primary hover:text-brand-secondary text-lg">
+            <p className="text-lg text-brand-primary hover:text-brand-secondary">
               in New York: +1-631-737-7500
             </p>
           </div>
         </div>
       </div>
 
-      <div className="flex justify-between items-center max-w-screen-2xl mx-auto">
-        <div className="mt-10 text-center text-brand-primary text-lg font-semibold">
+      <div className="flex items-center justify-between mx-auto max-w-screen-2xl">
+        <div className="mt-10 text-lg font-semibold text-center text-brand-primary">
           <p>Empowering Your Global Trade</p>
         </div>
         {/* Social Icons Section */}
-        <div className="mt-8 flex justify-center space-x-5">
+        <div className="flex justify-center mt-8 space-x-5">
           <a
             href="#"
-            className="text-brand-primary hover:text-white broder border-brand-primary border rounded-full p-3 text-2xl hover:bg-brand-primary ease-linear duration-200"
+            className="p-3 text-2xl duration-200 ease-linear border rounded-full text-brand-primary hover:text-white broder border-brand-primary hover:bg-brand-primary"
           >
             <FaFacebookF />
           </a>
           <a
             href="#"
-            className="text-brand-primary hover:text-white broder border-brand-primary border rounded-full p-3 text-2xl hover:bg-brand-primary ease-linear duration-200"
+            className="p-3 text-2xl duration-200 ease-linear border rounded-full text-brand-primary hover:text-white broder border-brand-primary hover:bg-brand-primary"
           >
             <FaTwitter />
           </a>
           <a
             href="#"
-            className="text-brand-primary hover:text-white broder border-brand-primary border rounded-full p-3 text-2xl hover:bg-brand-primary ease-linear duration-200"
+            className="p-3 text-2xl duration-200 ease-linear border rounded-full text-brand-primary hover:text-white broder border-brand-primary hover:bg-brand-primary"
           >
             <FaInstagram />
           </a>
           <a
             href="#"
-            className="text-brand-primary hover:text-white broder border-brand-primary border rounded-full p-3 text-2xl hover:bg-brand-primary ease-linear duration-200"
+            className="p-3 text-2xl duration-200 ease-linear border rounded-full text-brand-primary hover:text-white broder border-brand-primary hover:bg-brand-primary"
           >
             <FaLinkedinIn />
           </a>

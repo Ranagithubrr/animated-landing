@@ -3,7 +3,7 @@ import { MdCall } from "react-icons/md";
 
 const QuoteForm = () => {
   return (
-    <div className="border-b-2 border-brand-primary">
+    <div className="px-5 border-b-2 border-brand-primary">
       <div className="items-center px-2 pt-10 mx-auto lg:flex max-w-screen-2xl">
         <div className="w-full lg:w-1/2">
           <h4 className="text-3xl text-center font-semibo lg:text-left ld lg:text-5xl text-brand-primary">
