@@ -12,6 +12,8 @@ import QuoteForm from "./components/quoteForm/QuoteForm";
 import KeepInTouch from "./components/keepinTouch/KeepInTouch";
 import ReadytoSimplify from "./components/readyToSimplify/ReadytoSimplify";
 import Clients from "./clients/Clients";
+import AnimatedCircleAndText from "./components/animatedCircleandtext/AnimatedCicleandText";
+import PointerDots from "./components/animatedCircleandtext/pointerDots/PointerDots";
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
       <Hero />
       <Transport />
       <Services />
+      <AnimatedCircleAndText />
       <LogisticSolution />
       <Carousel />
       <Clients />
@@ -29,6 +32,7 @@ function App() {
       <CloserLookSlider />
       <Footer />
       <Copyright />
+      <PointerDots />
     </>
   );
 }
