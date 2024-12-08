@@ -1,3 +1,5 @@
+import LogoCircle from "./LogoCircle";
+
 const Clients = () => {
   return (
     <div className="bg-[#A3B4BD] py-12">
@@ -26,7 +28,8 @@ const Clients = () => {
             </div>
           </div>
         </div>
-        <div className="w-full lg:w-1/2">right</div>
+        <div className="w-full lg:w-1/2">
+        <LogoCircle /></div>
       </div>
     </div>
   );
