@@ -3,13 +3,15 @@ import LogoCircle from "./LogoCircle";
 const Clients = () => {
   return (
     <div className="bg-[#A3B4BD] py-12">
-      <div className="flex max-w-7xl 2xl:max-w-screen-2xl mx-auto">
+      <div className="flex mx-auto px-4 sm:max-w-full md:max-w-screen-md lg:max-w-7xl 2xl:max-w-screen-2xl">
         <div className="w-full lg:w-1/2">
           <div className="p-8 rounded-xl max-w-4xl mx-auto">
-            <button className="bg-white text-black border border-black rounded-full px-8 my-12 py-1 uppercase text-sm">out clients</button>
+            <button className="bg-white text-black border border-black rounded-full px-8 my-12 py-1 uppercase text-sm">
+              out clients
+            </button>
             <h2 className="text-3xl font-bold text-white mb-4">
               Solving problems with <br />
-               3PL and FTZ Solutions for the{" "} <br />
+              3PL and FTZ Solutions for the <br />
               <span className="font-bold text-brand-primary">
                 Worlds Biggest Brands
               </span>
@@ -29,7 +31,8 @@ const Clients = () => {
           </div>
         </div>
         <div className="w-full lg:w-1/2">
-        <LogoCircle /></div>
+          <LogoCircle />
+        </div>
       </div>
     </div>
   );

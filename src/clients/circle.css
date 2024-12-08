@@ -4,8 +4,7 @@
 .text-shpere {
     position: relative;
     top: 0;
-    width: 100%;
-    height: 100vh;
+    width: 100%;    
     display: flex;
     justify-content: center;
     align-items: center;   
@@ -20,13 +19,7 @@
     letter-spacing: 0.0625em;
     font-size: 1.3em;
 }
-
-/* Change color of each text in sphere on hover   */
 .tagcloud--item {
     color: white;
     text-transform: uppercase;
-}
-
-.tagcloud--item:hover {
-    color: #ff6347;
 }

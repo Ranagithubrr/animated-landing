@@ -10,19 +10,20 @@ const LogoCircle = () => {
     return () => {
       const container = ".tagcloud";
       const texts = [
-        "HTML",
-        "CSS",
-        "SASS",
-        "JavaScript",
-        "React",
-        "Vue",
-        "Nuxt",
-        "NodeJS",
-        "Babel",
-        "Jquery",
-        "ES6",
-        "GIT",
-        "GITHUB",
+        "OTR",
+        "CLF",
+        "Park Street",
+        "Pernod Richard",
+        "Sans",
+        "Brown Forman",
+        "BACARDI",
+        "PALM BAY",
+        "AIRWAYS",
+        "UNITED",       
+        "Clearfreight",       
+        "dibbleup",       
+        "DAVOS",       
+        "JimDeam",       
       ];
 
       const options = {
