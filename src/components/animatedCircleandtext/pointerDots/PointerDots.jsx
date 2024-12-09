@@ -10,30 +10,50 @@ const PointerDots = () => {
     canvas.height = window.innerHeight;
 
     const particles = [];
-    const createParticle = (x, y) => {
-      particles.push({ x, y, size: Math.random() * 3 + 1 });
-    };
+    const numParticles = 100; // Number of dots
+    const groupOffset = { x: 0, y: 0 }; // Group offset from the original position
+    let lastMouse = { x: canvas.width / 2, y: canvas.height / 2 }; // Store last mouse position
+
+    // Initialize particles with a grid of points
+    for (let i = 0; i < numParticles; i++) {
+      const x = Math.random() * canvas.width;
+      const y = Math.random() * canvas.height;
+      particles.push({ x, y, size: 2 });
+    }
 
     const drawParticles = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      particles.forEach((particle, index) => {
+      particles.forEach((particle) => {
         ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.arc(
+          particle.x + groupOffset.x, // Apply the group offset
+          particle.y + groupOffset.y,
+          particle.size,
+          0,
+          Math.PI * 2
+        );
         ctx.fillStyle = "rgba(0, 0, 0, 0.5)";
         ctx.fill();
-        particle.size -= 0.05;
-        if (particle.size <= 0) particles.splice(index, 1);
       });
     };
 
+    const updateParticles = () => {
+      // Gradually ease the group toward the mouse position
+      groupOffset.x += (lastMouse.x - canvas.width / 2 - groupOffset.x) * 0.02; // Move the group slowly
+      groupOffset.y += (lastMouse.y - canvas.height / 2 - groupOffset.y) * 0.02;
+    };
+
     const animate = () => {
+      updateParticles();
       drawParticles();
       requestAnimationFrame(animate);
     };
+
     animate();
 
     const handleMouseMove = (e) => {
-      createParticle(e.clientX, e.clientY);
+      lastMouse.x = e.clientX;
+      lastMouse.y = e.clientY;
     };
 
     window.addEventListener("mousemove", handleMouseMove);
