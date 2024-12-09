@@ -67,6 +67,7 @@ const PointerDots = () => {
     <canvas
       ref={canvasRef}
       style={{ position: "fixed", top: 0, left: 0, zIndex: -1 }}
+      className="box-border overflow-hidden max-w-[100vw]"
     />
   );
 };
