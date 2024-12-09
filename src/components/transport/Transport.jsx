@@ -30,10 +30,10 @@ const Transport = () => {
 
     if (screenWidth <= 768) {
       // For mobile and small screens (tablets/phones)
-      offset = 200; // Smaller offset for mobile devices
+      offset = 400; // Smaller offset for mobile devices
     } else if (screenWidth <= 1024) {
       // For medium screens (small laptops/tablets)
-      offset = 200;
+      offset = 600;
     } else if (screenWidth > 1024) {
       // For large screens (desktops)
       offset = 600;
@@ -83,11 +83,11 @@ const Transport = () => {
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                className="absolute flex items-center justify-center w-64 h-64 text-center text-white rounded-full 2xl:h-80 2xl:w-80 bg-brand-primary"
+                className="absolute flex items-center justify-center text-center text-white rounded-full w-36 h-36 lg:w-64 lg:h-64 2xl:h-80 2xl:w-80 bg-brand-primary"
                 style={serviceTransforms[index]}
               >
                 <motion.p
-                  className="p-4 text-3xl font-semibold"
+                  className="p-4 font-semibold lg:text-3xl"
                   style={{ opacity: textOpacity }}
                 >
                   {service.title}
