@@ -19,7 +19,7 @@ const Header = () => {
       {/* Right section: Desktop Menu */}
       <div className="flex items-center h-full">
         {/* Desktop Menu (hidden on mobile) */}
-        <div className="items-center hidden h-full md:flex">
+        <div className="items-center hidden h-full lg:flex">
           <ul className="flex items-center">
             <li className="px-5 text-[#193444] hover:text-[#50845E]">
               <a href="#" className="flex items-center">
@@ -53,7 +53,7 @@ const Header = () => {
         </div>
 
         {/* Clients Portal Button (hidden on mobile) */}
-        <div className="hidden h-full md:block">
+        <div className="hidden h-full lg:block">
           <button className="h-full bg-[#193444] flex items-center text-white hover:bg-[#50845E] px-10">
             Clients Portal{" "}
             <span className="ml-2 transform rotate-90">
@@ -63,7 +63,7 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu Toggle (shown only on mobile) */}
-        <div className="z-20 flex items-center h-full px-5 md:hidden">
+        <div className="z-20 flex items-center h-full px-5 lg:hidden">
           <button onClick={toggleMenu} className="text-2xl text-brand-primary">
             {isMenuOpen ? <FaTimes /> : <FaBars />}
           </button>
@@ -72,7 +72,7 @@ const Header = () => {
 
       {/* Mobile Menu (hidden by default) */}
       <div
-        className={`md:hidden ${isMenuOpen ? "block" : "hidden"} absolute top-0 left-0 w-full bg-white border-b border-black p-5`}
+        className={`lg:hidden ${isMenuOpen ? "block" : "hidden"} absolute top-0 left-0 w-full bg-white border-b border-black p-5`}
       >
         <ul className="flex flex-col items-center">
           <li className="py-3 text-[#193444] hover:text-[#50845E]">
