@@ -47,31 +47,31 @@ const Hero = () => {
       }}
       onMouseMove={handleMouseMove} // Track mouse movement
     >
-      <h1 ref={titleRef} className="font-extrabold text-brand-primary">
+      <h1 ref={titleRef} className="px-4 font-extrabold text-center lg:text-left text-brand-primary lg:px-0">
         <span
           className={` ${
-            closestWord === "EMPOWER" ? "text-6xl 2xl:text-7xl" : "text-5xl 2xl:text-6xl"
+            closestWord === "EMPOWER" ? "text-4xl lg:text-6xl 2xl:text-7xl" : "text-3xl lg:text-5xl 2xl:text-6xl"
           } word transition-all duration-500 ease-in-out mr-2`}
         >
           EMPOWER
         </span>
         <span
           className={` ${
-            closestWord === "YOUR" ? "text-6xl 2xl:text-7xl" : "text-5xl 2xl:text-6xl"
+            closestWord === "YOUR" ? "text-4xl lg:text-6xl 2xl:text-7xl" : "text-3xl lg:text-5xl 2xl:text-6xl"
           } word transition-all duration-500 ease-in-out mr-2`}
         >
           YOUR
         </span>{" "}
         <span
           className={` ${
-            closestWord === "GLOBAL" ? "text-6xl 2xl:text-7xl" : "text-5xl 2xl:text-6xl"
+            closestWord === "GLOBAL" ? "text-4xl lg:text-6xl 2xl:text-7xl" : "text-3xl lg:text-5xl 2xl:text-6xl"
           } word transition-all duration-500 ease-in-out mr-2`}
         >
           GLOBAL
         </span>{" "}
         <span
           className={` ${
-            closestWord === "TRADE" ? "text-6xl 2xl:text-7xl" : "text-5xl 2xl:text-6xl"
+            closestWord === "TRADE" ? "text-4xl lg:text-6xl 2xl:text-7xl" : "text-3xl lg:text-5xl 2xl:text-6xl"
           } word transition-all duration-500 ease-in-out`}
         >
           TRADE
