@@ -94,7 +94,7 @@ export default function LogisticSolution() {
   return (
     <div className="bg-brand-primary">
       <p
-        className="sticky top-0 pt-20 mx-auto text-4xl text-center text-gray-200 xl:w-2/3 2xl:w-[50%]"
+        className="sticky top-0 pt-20 mx-auto text-2xl px-4 lg:px-0 md:px-10 lg:text-4xl text-center text-gray-200 xl:w-2/3 2xl:w-[50%] bg-brand-primary"
         style={{
           zIndex: 10,                       
         }}

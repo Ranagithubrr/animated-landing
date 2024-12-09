@@ -22,8 +22,8 @@ function App() {
       <Hero />
       <Transport />
       <Services />
-      <AnimatedCircleAndText />
       <LogisticSolution />
+      <AnimatedCircleAndText />
       <Carousel />
       <Clients />
       <ReadytoSimplify />
