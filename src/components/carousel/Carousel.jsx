@@ -27,7 +27,7 @@ const Carousel = () => {
         {items.map((item, index) => (
           <p
             key={index}
-            className="flex-1 h-full overflow-hidden cursor-pointer transition-all duration-500 flex justify-end items-center hover:grow-[4] rounded-lg"
+            className="flex-1 h-full overflow-hidden cursor-pointer transition-all duration-500 flex justify-end items-center hover:grow-[8] lg:hover:grow-[4] rounded-lg"
             style={{
               backgroundImage: `url(${item.imageSource})`, 
               backgroundSize: "cover",
