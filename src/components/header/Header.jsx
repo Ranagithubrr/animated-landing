@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <div className="sticky flex items-center justify-between h-24 border-b border-black">
       {/* Left section with logo */}
-      <div className="flex items-center h-full pl-10 pr-20 border-r border-black 2xl:pl-32">
+      <div className="flex items-center h-full pl-10 pr-20 border-r border-black lg:pl-10 2xl:pl-48">
         <img src={Logo} alt="TRI LINK" className="w-32 lg:w-56" />
       </div>
 

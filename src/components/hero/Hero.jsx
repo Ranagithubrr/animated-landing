@@ -39,7 +39,7 @@ const Hero = () => {
 
   return (
     <div
-      className="flex flex-col justify-center h-[120vh] mx-auto max-w-screen-lg 2xl:max-w-screen-2xl items-left -mt-36"
+      className="flex flex-col justify-center h-[120vh] mx-auto 2xl:max-w-screen-2xl items-left -mt-36  lg:pl-12 2xl:pl-0"
       style={{
         backgroundImage: `url(${HeroBg})`,
         backgroundSize: "cover",
