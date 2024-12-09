@@ -1,5 +1,7 @@
 .slider-container {
   position: relative;
+  max-width: 98%;
+  margin:0 auto;
 }
 
 .arrow-container {
