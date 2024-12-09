@@ -26,12 +26,12 @@ const ReadytoSimplify = () => {
   return (
     <div className="bg-[#E2E2E2] py-20" ref={sectionRef}>
       <motion.div
-        className="h-[40rem] w-[40rem] p-10 flex items-center justify-center rounded-full bg-[#A3B4BD] mx-auto"
+        className="h-[20rem] lg:h-[40rem] w-[20rem] lg:w-[40rem] p-10 flex items-center justify-center rounded-full bg-[#A3B4BD] mx-auto"
         initial={{ y: -500, opacity: 0 }}
         animate={isVisible ? { y: 0, opacity: 1 } : { y: -500, opacity: 0 }}
         transition={{ duration: 1, ease: "easeInOut" }}
       >
-        <p className="text-3xl text-center text-white">
+        <p className="text-2xl text-center text-white lg:text-3xl">
           Ready to Simplify Logistics and Reduce Costs with World-Class 3PL and
           FTZ Solutions?
         </p>
