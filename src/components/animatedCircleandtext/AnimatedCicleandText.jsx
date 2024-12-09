@@ -46,7 +46,7 @@ const AnimatedCircleAndText = () => {
         ref={ref}
         initial={{ borderRadius: "0" }}
         animate={{
-          borderRadius: isInView ? "50px 50px 0px 0px" : "0",
+          borderRadius: isInView ? "100% 100% 0 0 " : "0",
         }}
         transition={{ duration: 0.5, delay: 0.5 }}
         className="w-full h-28 bg-[#A3B4BD]"
