@@ -80,7 +80,7 @@ const Hero = () => {
       <p className="px-5 mt-5 text-2xl text-center lg:text-3xl text-brand-primary lg:text-left lg:px-0">
         with high-efficiency and FTZ solutions.
       </p>
-      <div className="absolute right-[10%] bottom-[10%] flex items-center flex-col">
+      <div className="absolute lg:right-[10%] bottom-[10%] flex items-center flex-col w-full lg:w-auto">
         <p className="text-3xl font-semibold text-center text-brand-primary">
           Scroll more
           <br />& explore!
