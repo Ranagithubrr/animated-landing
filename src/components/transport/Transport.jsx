@@ -74,7 +74,7 @@ const Transport = () => {
         className="h-[180vh] 2xl:h-[180vh]"
       >
         <div className="relative flex flex-col items-center py-16">
-          <h2 className="mb-32 text-6xl font-semibold text-brand-primary">
+          <h2 className="mb-32 text-3xl font-semibold text-center lg:text-6xl text-brand-primary">
             Worldwide Transport, Simplified
           </h2>
 
