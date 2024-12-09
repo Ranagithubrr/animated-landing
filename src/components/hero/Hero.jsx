@@ -45,7 +45,7 @@ const Hero = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-      onMouseMove={handleMouseMove} // Track mouse movement
+      onMouseMove={handleMouseMove}
     >
       <h1 ref={titleRef} className="px-4 font-extrabold text-center lg:text-left text-brand-primary lg:px-0">
         <span
@@ -77,7 +77,7 @@ const Hero = () => {
           TRADE
         </span>
       </h1>
-      <p className="mt-5 text-3xl text-brand-primary">
+      <p className="px-5 mt-5 text-2xl text-center lg:text-3xl text-brand-primary lg:text-left lg:px-0">
         with high-efficiency and FTZ solutions.
       </p>
       <div className="absolute right-[10%] bottom-[10%] flex items-center flex-col">
