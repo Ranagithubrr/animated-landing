@@ -3,13 +3,13 @@ import bgRoundImage from "../../assets/img/circleimg.webp";
 
 const AnimatedCircleAndText = () => {
   return (
-    <div className="flex w-full items-center justify-between py-20">
+    <div className="flex items-center justify-between w-full h-full py-10 bg-white">
       {/* Left Section: Circle */}
       <motion.div
         initial={{ scale: 0.3, x: "50%", y: "-100%" }}
         animate={{ scale: 1, x: "0%", y: "0%" }}
         transition={{ duration: 2, ease: "easeInOut" }}
-        className="w-1/2 flex justify-center items-center"
+        className="flex items-center justify-center w-1/2 h-full"
       >
         <motion.div
           className="bg-gray-400 rounded-full"
@@ -18,8 +18,7 @@ const AnimatedCircleAndText = () => {
             height: "600px",        
             backgroundImage: `url(${bgRoundImage})`,
             backgroundSize: "cover",
-            backgroundPosition: "center",
-            marginLeft: "-600px"
+            backgroundPosition: "center",            
           }}
         />
       </motion.div>
@@ -29,7 +28,7 @@ const AnimatedCircleAndText = () => {
         initial={{ opacity: 0, x: "100%" }}
         animate={{ opacity: 1, x: "0%" }}
         transition={{ duration: 1, delay: 2 }}
-        className="w-1/2 text-left text-gray-800 flex flex-col space-y-4 p-8"
+        className="flex flex-col w-1/2 p-8 space-y-4 text-left text-gray-800"
       >
         <h1 className="text-3xl font-bold text-right">
           Specializing in Efficient, Lower-Cost Transport of Key Retail Products
