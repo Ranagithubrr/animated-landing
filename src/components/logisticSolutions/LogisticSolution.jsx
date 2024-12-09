@@ -87,8 +87,8 @@ function Counter({ initialValue, label, color }) {
 export default function LogisticSolution() {
   const data = [
     { value: 80, label: "Average Number Of Clients", color: "text-white" },
-    { value: 95, label: "% Rate of orders completed on time", color: "text-brand-secondary" },
-    { value: 76, label: "% Warehouse capacity utilization rate", color: "text-gray-500" },
+    { value: 95, label: "% Rate of orders completed on time", color: "text-gray-500" },
+    { value: 76, label: "% Warehouse capacity utilization rate", color: "text-brand-secondary" },
   ];
 
   return (
