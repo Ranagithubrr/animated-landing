@@ -77,7 +77,7 @@ function Counter({ initialValue, label, color }) {
           transition={{ duration: 0.5 }}
           className={`absolute right-[5%] flex items-center ${color}`}
         >
-          <span className="text-9xl">{count}</span> <span className="text-2xl font-normal w-52">{label}</span>
+          <span className="text-7xl 2xl:text-9xl">{count}</span> <span className="text-2xl font-normal leading-7 w-52">{label}</span>
         </motion.span>    
       </motion.div>
     </section>
@@ -94,7 +94,7 @@ export default function LogisticSolution() {
   return (
     <div className="bg-brand-primary">
       <p
-        className="sticky top-0 pt-20 mx-auto text-2xl px-4 lg:px-0 md:px-10 lg:text-4xl text-center text-gray-200 xl:w-2/3 2xl:w-[50%] bg-brand-primary"
+        className="sticky top-0 w-full px-5 pt-20 mx-auto text-2xl text-center text-gray-200 lg:px-44 2xl:px-[30rem] md:px-10 lg:text-4xl bg-brand-primary"
         style={{
           zIndex: 10,                       
         }}
