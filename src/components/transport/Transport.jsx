@@ -71,7 +71,7 @@ const Transport = () => {
     <section id="transportSection">
       <div
         style={{ maxWidth: "100vw", overflow: "hidden" }}
-        className="h-[180vh] 2xl:h-[180vh]"
+        className="h-[100vh] lg:h-[180vh] 2xl:h-[180vh]"
       >
         <div className="relative flex flex-col items-center py-16">
           <h2 className="mb-32 text-3xl font-semibold text-center lg:text-6xl text-brand-primary">
