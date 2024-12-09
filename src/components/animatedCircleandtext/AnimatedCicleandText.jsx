@@ -1,11 +1,13 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import bgRoundImage from "../../assets/img/circleimg.webp";
 
 const AnimatedCircleAndText = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { threshold: 0.5 });
   return (
     <div>
       <div className="items-center justify-between w-full h-full py-10 bg-white lg:flex">
-        {/* Left Section: Circle */}
         <motion.div
           initial={{ scale: 0.3, x: "50%", y: "-100%" }}
           animate={{ scale: 1, x: "0%", y: "0%" }}
@@ -15,8 +17,6 @@ const AnimatedCircleAndText = () => {
           <motion.div
             className="bg-gray-400 rounded-full w-[300px] h-[300px] lg:w-[600px] lg:h-[600px]"
             style={{
-              // width: "600px",
-              // height: "600px",
               backgroundImage: `url(${bgRoundImage})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
@@ -42,7 +42,15 @@ const AnimatedCircleAndText = () => {
           </p>
         </motion.div>
       </div>
-      <div className="w-full h-28 bg-[#A3B4BD] rounded-t-[100%]"></div>
+      <motion.div
+        ref={ref}
+        initial={{ borderRadius: "0" }}
+        animate={{
+          borderRadius: isInView ? "50px 50px 0px 0px" : "0",
+        }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className="w-full h-28 bg-[#A3B4BD]"
+      ></motion.div>
     </div>
   );
 };
