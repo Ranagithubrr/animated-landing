@@ -11,7 +11,7 @@ import CloserLookSlider from "./components/closerLookSlider/CloserLookSlider";
 import QuoteForm from "./components/quoteForm/QuoteForm";
 import KeepInTouch from "./components/keepinTouch/KeepInTouch";
 import ReadytoSimplify from "./components/readyToSimplify/ReadytoSimplify";
-import Clients from "./clients/Clients";
+import Clients from "./components/clients/Clients";
 import AnimatedCircleAndText from "./components/animatedCircleandtext/AnimatedCicleandText";
 import PointerDots from "./components/animatedCircleandtext/pointerDots/PointerDots";
 
