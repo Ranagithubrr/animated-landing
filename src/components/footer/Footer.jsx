@@ -29,16 +29,16 @@ const Footer = () => {
 
   return (
     <footer className="px-5 py-10 text-white border-b border-brand-primary">
-      <div className="flex justify-between mx-auto max-w-screen-2xl">
+      <div className="justify-between mx-auto md:flex max-w-screen-2xl">
         {/* Left Section */}
-        <div className="w-4/12">
-          <div className="flex flex-col items-start w-3/4 justify-left">
+        <div className="w-full md:w-4/12">
+          <div className="flex flex-col items-start md:w-3/4 justify-left">
             <img src={Logo} alt="Tri Link" className="mx-auto max-w-64" />
-            <p className="mt-2 text-center text-brand-primary">
+            <p className="my-2 mt-2 lg:text-center text-brand-primary">
               Tri Link delivers exceptional FTZ and 3PL services tailored to
               your global trade needs.
             </p>
-            <p className="mt-2 text-center text-brand-primary">
+            <p className="mt-2 mb-2 lg:text-center text-brand-primary">
               Our solutions combine innovation, quality, and efficiency to
               exceed your expectations and meet your specific requirements.
             </p>
@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
 
         {/* Middle Section (General Links) */}
-        <div className="w-2/12">
+        <div className="w-full md:w-2/12">
           <h3 className="text-2xl font-semibold text-brand-primary">General</h3>
           <ul className="mt-3 space-y-2">
             {menuItems.general.map((item, index) => (
@@ -63,7 +63,7 @@ const Footer = () => {
         </div>
 
         {/* Right Section (Services Links) */}
-        <div className="w-2/12">
+        <div className="w-full md:w-2/12">
           <h3 className="text-2xl font-semibold text-brand-primary">
             Services
           </h3>
@@ -103,7 +103,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-between mx-auto max-w-screen-2xl">
+      <div className="items-center justify-between mx-auto lg:flex max-w-screen-2xl">
         <div className="mt-10 text-lg font-semibold text-center text-brand-primary">
           <p>Empowering Your Global Trade</p>
         </div>
