@@ -6,7 +6,7 @@ const Services = () => {
       <div className="mx-auto max-w-screen-2xl">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div className="p-6 rounded-lg">
-            <h3 className="mb-4 text-3xl font-semibold text-center text-gray-100">
+            <h3 className="mb-4 text-2xl font-semibold text-center text-gray-100 lg:text-3xl">
               Cost-Saving FTZ Fulfillment
             </h3>
             <p className="text-center text-gray-100">
@@ -16,7 +16,7 @@ const Services = () => {
             </p>
           </div>
           <div className="p-6 rounded-lg">
-            <h3 className="mb-4 text-3xl font-semibold text-center text-gray-100">
+            <h3 className="mb-4 text-2xl font-semibold text-center text-gray-100 lg:text-3xl">
               Unmatched FDA/EPA Approved Relabeling
             </h3>
             <p className="text-center text-gray-100">
@@ -26,7 +26,7 @@ const Services = () => {
             </p>
           </div>
           <div className="p-6 rounded-lg">
-            <h3 className="mb-4 text-3xl font-semibold text-center text-gray-100">
+            <h3 className="mb-4 text-2xl font-semibold text-center text-gray-100 lg:text-3xl">
               World-Class Warehouse Services
             </h3>
             <p className="text-center text-gray-100">
@@ -36,7 +36,7 @@ const Services = () => {
             </p>
           </div>
           <div className="p-6 rounded-lg">
-            <h3 className="mb-4 text-3xl font-semibold text-center text-gray-100">
+            <h3 className="mb-4 text-2xl font-semibold text-center text-gray-100 lg:text-3xl">
               Efficient 3PL Services
             </h3>
             <p className="text-center text-gray-100">
